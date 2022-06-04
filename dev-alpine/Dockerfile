@@ -1,9 +1,9 @@
 FROM node:lts-alpine3.12
 
-VOLUME ["/app"]
+VOLUME ["/mnt/host"]
 
 COPY . .
 RUN sh setup.sh; rm setup.sh
 CMD zsh
 
-WORKDIR /app
+WORKDIR /mnt/host
